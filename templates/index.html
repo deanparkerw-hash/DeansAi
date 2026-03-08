@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Prompt Input</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        label { display: block; margin: 10px 0 5px; }
+        select, input[type='button'] { margin: 10px 0; padding: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Video Prompt Input</h1>
+    <label for="video-prompt">Enter your video prompt:</label>
+    <input type="text" id="video-prompt" placeholder="Enter your prompt here..."><br>
+    <label for="style-selector">Select a style:</label>
+    <select id="style-selector">
+        <option value="cartoon">Cartoon</option>
+        <option value="3d">3D</option>
+        <option value="anime">Anime</option>
+        <option value="oil-painting">Oil Painting</option>
+    </select><br>
+    <input type="button" value="Generate" onclick="generateVideo()">
+    <h2>Video Preview</h2>
+    <video id="video-preview" width="600" controls></video>
+
+    <script>
+        function generateVideo() {
+            const prompt = document.getElementById('video-prompt').value;
+            const style = document.getElementById('style-selector').value;
+            // Here you would implement the logic to generate the video based on the prompt and style
+            console.log('Generating video with prompt:', prompt, 'and style:', style);
+            // For now, let's set a sample source for the video preview
+            document.getElementById('video-preview').src = 'sample.mp4'; // Placeholder video 
+        }
+    </script>
+</body>
+</html>
