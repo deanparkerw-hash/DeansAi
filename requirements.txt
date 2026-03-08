@@ -1,0 +1,7 @@
+Flask
+Flask-CORS
+torch
+diffusers
+transformers
+Pillow
+TTS (Coqui)
